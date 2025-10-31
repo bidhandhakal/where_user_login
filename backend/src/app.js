@@ -1,10 +1,10 @@
 const express = require("express");
-const cookierParser = require("cookie-parser");
+const cookieParser = require("cookie-parser");
 const authRoutes = require("./routes/auth.routes");
 const cors = require("cors");
 
 const app = express();
-app.use(cookierParser());
+app.use(cookieParser());
 app.use(express.json());
 app.use(
   cors({
@@ -14,7 +14,7 @@ app.use(
 );
 
 app.get("/", (req, res) => {
-  res.send("Muji started");
+  res.send("server started");
 });
 
 app.use("/api/auth", authRoutes);
