@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import UserLogin from "../pages/auth/UserLogin";
 import UserRegister from "../pages/auth/UserRegister";
-import Home from "../pages/home/home";
+import Home from "../pages/general/Home";
 
 const AppRoutes = () => {
   return (

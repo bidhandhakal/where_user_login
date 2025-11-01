@@ -26,7 +26,7 @@ const UserRegister = () => {
       );
 
       console.log(response.data);
-      navigate("/");
+      navigate("/user/login");
     } catch (error) {
       console.error("Registration failed:", error);
     }
