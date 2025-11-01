@@ -57,6 +57,7 @@ const UserRegister = () => {
               name="username"
               type="text"
               required
+              autoComplete="username"
               placeholder="Enter your username"
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
@@ -74,6 +75,7 @@ const UserRegister = () => {
               name="email"
               type="email"
               required
+              autoComplete="email"
               placeholder="Enter your email"
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
@@ -91,6 +93,7 @@ const UserRegister = () => {
               name="password"
               type="password"
               required
+              autoComplete="new-password"
               placeholder="Create a password"
               className="w-full px-4 py-2 border  border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
