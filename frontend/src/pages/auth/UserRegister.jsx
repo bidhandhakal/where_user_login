@@ -8,7 +8,7 @@ const UserRegister = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const username = e.target.username.value;
+    const fullname = e.target.fullname.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
 
@@ -16,7 +16,7 @@ const UserRegister = () => {
       const response = await axios.post(
         "http://localhost:3000/api/auth/user/register",
         {
-          username,
+          fullname,
           email,
           password,
         },
@@ -47,18 +47,18 @@ const UserRegister = () => {
         <form className="space-y-6" onSubmit={handleSubmit} noValidate>
           <div>
             <label
-              htmlFor="username"
+              htmlFor="fullname"
               className="block text-sm font-medium text-gray-700 mb-1"
             >
-              Username
+              Full Name
             </label>
             <input
-              id="username"
-              name="username"
+              id="fullname"
+              name="fullname"
               type="text"
               required
-              autoComplete="username"
-              placeholder="Enter your username"
+              autoComplete="name"
+              placeholder="Enter your fullname"
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
           </div>

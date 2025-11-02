@@ -3,7 +3,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 async function registerUser(req, res) {
-  const { username, email, password } = req.body;
+  const { fullname, email, password } = req.body;
 
   const isUserExist = await userModel.findOne({
     email,
@@ -17,7 +17,7 @@ async function registerUser(req, res) {
   const hashpassword = await bcrypt.hash(password, 10);
 
   const user = await userModel.create({
-    username,
+    fullname,
     email,
     password: hashpassword,
   });
@@ -29,7 +29,7 @@ async function registerUser(req, res) {
     user: {
       _id: user._id,
       email: user.email,
-      username: user.username,
+      fullname: user.fullname,
     },
   });
 }
@@ -61,7 +61,7 @@ async function loginUser(req, res) {
     user: {
       _id: user._id,
       email: user.email,
-      username: user.username,
+      fullname: user.fullname,
     },
   });
 }
