@@ -14,7 +14,7 @@ const UserRegister = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/auth/user/register",
+        "http://localhost:8000/api/auth/user/register",
         {
           fullname,
           email,
