@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
 const UserLogin = () => {
   const navigate = useNavigate();
+
+  // If a token cookie exists, the user is already signed in — redirect to home
+  useEffect(() => {
+    const hasToken = document.cookie
+      .split(";")
+      .some((c) => c.trim().startsWith("token="));
+    if (hasToken) navigate("/");
+  }, [navigate]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

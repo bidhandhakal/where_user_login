@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const UserRegister = () => {
   const navigate = useNavigate();
+
+  //  redirect to home if already signed in
+  useEffect(() => {
+    const hasToken = document.cookie
+      .split(";")
+      .some((c) => c.trim().startsWith("token="));
+    if (hasToken) navigate("/");
+  }, [navigate]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,9 +27,6 @@ const UserRegister = () => {
           fullname,
           email,
           password,
-        },
-        {
-          withCredentials: true,
         }
       );
 
