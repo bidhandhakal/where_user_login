@@ -76,7 +76,7 @@ const UserLogin = () => {
         <div className="text-center">
           <div className="flex justify-center mb-6">
             <img
-              src="/src/assets/logo.svg"
+              src="/public/logo.svg"
               alt="AgroConnect Logo"
               className="h-16 w-auto"
             />
