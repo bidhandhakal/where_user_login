@@ -79,31 +79,13 @@ const UserRegister = () => {
     <div className="min-h-screen flex flex-col items-center justify-center bg-white p-4 sm:p-6">
       <Toaster position="top-right" />
       <div className="w-full max-w-md space-y-8 px-4 sm:px-6">
-        {/* Logo and Title */}
         <div className="text-center">
-          <div className="flex justify-center mb-4">
-            <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-8 w-8 text-white"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 6.042c2.915 0 5.278 2.419 5.278 5.403 0 2.984-2.363 5.403-5.278 5.403-2.915 0-5.278-2.419-5.278-5.403 0-2.984 2.363-5.403 5.278-5.403z"
-                />
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 9c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z"
-                />
-              </svg>
-            </div>
+          <div className="flex justify-center mb-6">
+            <img
+              src="/src/assets/logo.svg"
+              alt="AgroConnect Logo"
+              className="h-16 w-auto"
+            />
           </div>
           <h1 className="text-2xl font-bold text-gray-900">AgroConnect</h1>
           <p className="mt-1 text-sm text-gray-500">
@@ -111,16 +93,49 @@ const UserRegister = () => {
           </p>
         </div>
 
-        <div className="flex justify-center space-x-4 text-sm">
-          <Link to="/user/login" className="text-gray-500">
-            Login
-          </Link>
-          <Link
-            to="/user/register"
-            className="font-semibold text-green-600 border-b-2 border-green-600 pb-1"
-          >
-            Register
-          </Link>
+        <div className="flex justify-center mb-8">
+          <div className="relative flex p-1 bg-gray-100 rounded-full shadow-inner">
+            <div
+              className="absolute bg-white rounded-full transition-all duration-300 shadow-lg"
+              style={{ width: "50%", height: "85%", top: "7.5%", left: "49%" }}
+            ></div>
+            <Link
+              to="/user/login"
+              className="relative z-10 px-8 py-2 text-center text-gray-500 hover:text-[#157539] transition-colors duration-300"
+            >
+              <div className="flex items-center justify-center space-x-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M3 3a1 1 0 011 1v12a1 1 0 11-2 0V4a1 1 0 011-1zm7.707 3.293a1 1 0 010 1.414L9.414 9H17a1 1 0 110 2H9.414l1.293 1.293a1 1 0 01-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                <span>Login</span>
+              </div>
+            </Link>
+            <Link
+              to="/user/register"
+              className="relative z-10 px-8 py-2 text-center font-medium text-[#157539] transition-colors duration-300"
+            >
+              <div className="flex items-center justify-center space-x-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z" />
+                </svg>
+                <span>Register</span>
+              </div>
+            </Link>
+          </div>
         </div>
 
         <form className="space-y-4" onSubmit={handleSubmit} noValidate>
@@ -155,7 +170,8 @@ const UserRegister = () => {
                 required
                 autoComplete="name"
                 placeholder="Enter your full name"
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:border-[#157539]"
+                style={{ "--tw-ring-color": "#157539" }}
               />
             </div>
           </div>
@@ -188,7 +204,8 @@ const UserRegister = () => {
                 required
                 autoComplete="email"
                 placeholder="Enter your email"
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:border-[#157539]"
+                style={{ "--tw-ring-color": "#157539" }}
               />
             </div>
           </div>
@@ -224,7 +241,8 @@ const UserRegister = () => {
                 required
                 autoComplete="new-password"
                 placeholder="Create a password"
-                className="w-full pl-10 pr-12 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                className="w-full pl-10 pr-12 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:border-[#157539]"
+                style={{ "--tw-ring-color": "#157539" }}
               />
               <button
                 type="button"
@@ -285,7 +303,8 @@ const UserRegister = () => {
 
           <button
             type="submit"
-            className="w-full bg-green-600 text-white py-2 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+            className="w-full text-white py-2 rounded-lg font-semibold transition-opacity hover:opacity-90"
+            style={{ backgroundColor: "#157539" }}
           >
             Create Account
           </button>
