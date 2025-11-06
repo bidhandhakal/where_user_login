@@ -82,7 +82,7 @@ const UserRegister = () => {
         <div className="text-center">
           <div className="flex justify-center mb-6">
             <img
-              src="/public/logo.svg"
+              src="/logo.svg"
               alt="AgroConnect Logo"
               className="h-16 w-auto"
             />
