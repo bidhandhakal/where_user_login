@@ -69,20 +69,22 @@ const UserLogin = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-white p-4 sm:p-6">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-white p-2 sm:p-6">
       <Toaster position="top-right" />
-      <div className="w-full max-w-md space-y-8 px-4 sm:px-6">
+      <div className="w-[95%] md:w-full md:max-w-md space-y-8 px-3 sm:px-6">
         {/* Logo and Title */}
         <div className="text-center">
-          <div className="flex justify-center mb-6">
+          <div className="flex justify-center mb-8">
             <img
               src="/logo.svg"
               alt="AgroConnect Logo"
-              className="h-16 w-auto"
+              className="h-20 w-auto sm:h-16"
             />
           </div>
-          <h1 className="text-2xl font-bold text-gray-900">AgroConnect</h1>
-          <p className="mt-1 text-sm text-gray-500">
+          <h1 className="text-3xl sm:text-2xl font-bold text-gray-900">
+            AgroConnect
+          </h1>
+          <p className="mt-2 text-base sm:text-sm text-gray-500">
             Cultivating Digital Solutions
           </p>
         </div>
