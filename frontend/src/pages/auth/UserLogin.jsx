@@ -74,11 +74,11 @@ const UserLogin = () => {
       <div className="w-[95%] md:w-full md:max-w-md space-y-8 px-3 sm:px-6">
         {/* Logo and Title */}
         <div className="text-center">
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-2">
             <img
               src="/logo.svg"
               alt="AgroConnect Logo"
-              className="h-20 w-auto sm:h-16"
+              className="h-26 w-auto sm:h-26"
             />
           </div>
           <h1 className="text-3xl sm:text-2xl font-bold text-gray-900">
